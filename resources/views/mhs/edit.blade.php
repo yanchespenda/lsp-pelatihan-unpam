@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h3>Edit Biodata</h3>
+                <h3>Edit Mahasiswa</h3>
             </div>
         </div>
 
