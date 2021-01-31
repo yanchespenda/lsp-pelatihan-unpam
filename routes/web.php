@@ -12,5 +12,14 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth/login');
 });
+
+Auth::routes(['verify' => true]);
+
+Route::group(['middleware' => 'auth'], function() {
+    Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
+    Route::resource('/mhs', 'MahasiswaController');
+});
+
+
